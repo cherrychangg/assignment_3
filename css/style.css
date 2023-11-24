@@ -1,0 +1,58 @@
+ /* Nevigation bar */
+        *, *::before,*::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            font-family: "Lato", sans-serif;
+            background-color: #2F4858;
+        }
+
+        .btn {
+            background-color: var(--background-color);
+            border-radius: 30px;
+            width: 200px;
+            height: 60px;
+            font-size: 20px;
+            text-align: center;
+            font-weight: 400;
+            margin: 5px;
+            position: relative;
+            cursor: pointer;
+
+            font-family: "Lato", sans-serif;
+
+            --background-color: #198BFC;
+        }
+
+        .btn.btn-background-circle {
+            z-index: 1;
+            overflow: hidden;
+            background-color: #20B051;
+            color: #FFF;
+        }
+
+        .btn.btn-background-circle::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            background-color: var(--background-color);
+            border-radius: 50%;
+            transition: transform 500ms ease-in-out;
+
+            transform: scale(1.5);
+        }
+
+        .btn.btn-background-circle:hover::before,
+        .btn.btn-background-circle:focus::before {
+            transform: scale(0);
+        }
+

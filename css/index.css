@@ -1,0 +1,79 @@
+  /* The Box */
+  * {
+    margin: 0;
+    padding: 0px;
+  }
+
+  .flex-container {
+    display: flex;
+    flew-flow: row wrap;
+    flex-wrap: wrap;
+    max-width: 1440px;
+    justify-content: space-evenly;
+    margin: 4em 1em;
+  }
+
+  .flex-container div{
+    width: 600px;height: 500px; margin: 5px;
+    background-color: aqua;
+    font-size: 3em; text-align: center; color: white;
+    position: relative; 
+    border-radius: 20px;
+  }
+
+  .flex-container div:nth-child(1){
+    flex: 0 0 700px;
+  }
+
+  .flex-container div:nth-child(2){
+
+  }
+
+  .flex-container div:nth-child(3){
+    flex: 1 0 calc(100% - 50px);
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .parent {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  hr {
+    height: 2px;
+    background: #BDBDBD;
+    border: 2px;
+  }
+
+  figure {
+    float: left;
+    width: 290px;
+    height: 220px;
+    padding: 5px;
+    margin: 20px;
+    border: 1px solid #eeeeee;
+  }
+
+  img.rounded-corners {
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  .content {
+    display: flex;
+  }
+
+  .content img {
+    margin-right: 10px;
+    display: block;
+  }
+
+  .content h3,
+  .content p {
+    margin: 0;
+  }
