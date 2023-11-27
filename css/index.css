@@ -1,37 +1,36 @@
   /* The Box */
-  * {
-    margin: 0;
-    padding: 0px;
-  }
+
+  /* https://www.youtube.com/watch?v=cH0TC9gWiAg&t=90s */
 
   .flex-container {
     display: flex;
-    flew-flow: row wrap;
     flex-wrap: wrap;
     max-width: 1440px;
-    justify-content: space-evenly;
+    justify-content: center;
     margin: 4em 1em;
   }
 
   .flex-container div{
-    width: 600px;height: 500px; margin: 5px;
-    background-color: aqua;
+    width: 550px;height: 500px; margin: 5px; padding: 5px;
+    background-color: rgb(7, 203, 203);
     font-size: 3em; text-align: center; color: white;
     position: relative; 
     border-radius: 20px;
   }
 
   .flex-container div:nth-child(1){
-    flex: 0 0 700px;
+    flex: 0 1 600px;
   }
 
   .flex-container div:nth-child(2){
-
+    flex: 0 0 700px;
   }
 
   .flex-container div:nth-child(3){
-    flex: 1 0 calc(100% - 50px);
+    flex: 0 0 calc(100% - 80px);
   }
+
+/*Copied code ends*/
 
   .center {
     display: block;
@@ -45,35 +44,74 @@
     left: 0;
   }
 
-  hr {
-    height: 2px;
-    background: #BDBDBD;
-    border: 2px;
+/*Box for the experience page*/
+  .box {
+    width: 990px;
+    height: 156px;
   }
 
-  figure {
-    float: left;
-    width: 290px;
-    height: 220px;
-    padding: 5px;
-    margin: 20px;
-    border: 1px solid #eeeeee;
+  .box .rectangle {
+    position: relative;
+    width: 990px;
+    height: 156px;
+    top: 0;
+    left: 0;
+    background-color: #33658a;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px #00000040;
+  }
+  
+
+/*https://www.w3schools.com/howto/howto_css_blurred_background.asp*/
+
+  .bg-image {
+    /* The image used */
+    background-image: url("../img/HongKong.jpg");
+    background-image: url("../img/Toronto.JPG");
+    
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    
+    /* Full height */
+    height: 100%; 
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Position text in the middle of the page/image */
+  .bg-text {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
   }
 
-  img.rounded-corners {
-    border-radius: 20px 20px 0px 0px;
-  }
+/* Position text beside the image */
+.grid-container {
+  display: flex;
+  grid-template-columns: 200px;
+  gap: 20px;
+  background-color: #2F4858;
+  padding: 20px;
+  justify-content: center ;
+}
 
-  .content {
-    display: flex;
-  }
-
-  .content img {
-    margin-right: 10px;
-    display: block;
-  }
-
-  .content h3,
-  .content p {
-    margin: 0;
-  }
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
